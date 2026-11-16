@@ -11,7 +11,7 @@
 <meta property="og:title" content="Muhammad Abdulla Almindhry | Founder of CargoOS and AlmindhryBuilds">
 <meta property="og:description" content="Founder and mechatronics engineering student. Builds CargoOS and AlmindhryBuilds.">
 <meta property="og:url" content="https://muhammdabdulla251-lab.github.io/">
-<meta name="theme-color" content="#07090d">
+<meta name="theme-color" content="#f3efe7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,86 +59,209 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#07090d;--card:#0f151e;--line:#1b2636;--line2:#27364b;--tx:#eaf0f8;--mut:#93a0b5;--blue:#2f7dff;--blue2:#69a8ff}
+:root{--paper:#f3efe7;--ink:#11110f;--mut:#6d6a63;--line:#d6cfc2;--acc:#c8472b;--max:1240px}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--tx);font:17px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
-h1,h2,h3,.btn,.k{font-family:Sora,Inter,sans-serif}
-a{color:inherit}
-.wrap{width:min(980px,100% - 40px);margin-inline:auto}
-header{padding:26px 0;display:flex;justify-content:space-between;align-items:center}
-.logo{font:800 16px Sora,sans-serif;letter-spacing:.04em;text-decoration:none}
-.logo span{color:var(--blue2)}
-nav{display:flex;gap:22px;font-size:14px}
-nav a{color:var(--mut);text-decoration:none} nav a:hover{color:var(--tx)}
-.hero{padding:70px 0 80px;position:relative}
-.hero:before{content:"";position:absolute;inset:-30% -20% auto;height:130%;background:radial-gradient(50% 50% at 75% 30%,rgba(47,125,255,.2),transparent 70%);pointer-events:none}
-.k{font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue2);display:block;margin-bottom:18px}
-h1{font-size:clamp(40px,7vw,72px);line-height:1.03;letter-spacing:-.035em;margin-bottom:22px;position:relative}
-h1 em{font-style:normal;background:linear-gradient(100deg,var(--blue2),#fff 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:20px;color:var(--mut);max-width:640px;position:relative}
-.lead b{color:var(--tx);font-weight:500}
-.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;position:relative}
-.facts span{border:1px solid var(--line2);border-radius:999px;padding:8px 14px;font-size:14px;color:var(--mut)}
-section{padding:70px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(26px,4vw,38px);line-height:1.15;letter-spacing:-.02em;margin-bottom:26px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;transition:transform .3s,border-color .3s}
-.card:hover{transform:translateY(-4px);border-color:rgba(47,125,255,.55)}
-.card h3{font-size:24px;margin-bottom:6px}
-.card .t{color:var(--blue2);font-size:14px;margin-bottom:14px;display:block}
-.card p{color:var(--mut);font-size:16px}
-.card ul{margin:16px 0 0 18px;color:var(--mut);font-size:15px}
-.card li{margin-bottom:6px}
-.about p{color:var(--mut);max-width:720px;margin-bottom:16px}
-.about p b{color:var(--tx);font-weight:500}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line2);transition:.2s;margin:6px 8px 0 0}
-.btn:hover{border-color:var(--blue);color:var(--blue2)}
-footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:13px}
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 "Inter Tight",system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ink);color:var(--paper)}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.mono{font:500 12px/1.4 "DM Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
+.wrap{width:min(var(--max),100% - 48px);margin-inline:auto}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+#bar{position:fixed;left:0;top:0;height:2px;width:0;background:var(--acc);z-index:95}
+#cur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:var(--acc);pointer-events:none;z-index:99;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,opacity .3s;opacity:0}
+#cur.big{width:64px;height:64px;background:rgba(200,71,43,.22)}
+@media (hover:none){#cur{display:none}}
+
+header{position:fixed;top:0;left:0;right:0;z-index:80;mix-blend-mode:difference;color:#fff}
+.hd{display:flex;justify-content:space-between;align-items:center;height:72px}
+.hd nav{display:flex;gap:28px}
+.hd a{position:relative}
+.hd nav a:after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.7,0,.2,1)}
+.hd nav a:hover:after{transform:scaleX(1);transform-origin:left}
+
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 0 44px;position:relative}
+.status{display:inline-flex;align-items:center;gap:10px;margin-bottom:34px;color:var(--mut)}
+.dot{width:8px;height:8px;border-radius:50%;background:#2e9b5c;animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,155,92,.6)}70%{box-shadow:0 0 0 10px rgba(46,155,92,0)}100%{box-shadow:0 0 0 0 rgba(46,155,92,0)}}
+h1{font-size:clamp(52px,11.2vw,176px);line-height:.9;letter-spacing:-.035em}
+h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
+h1 .l span{display:block;transform:translateY(110%);animation:up 1.1s cubic-bezier(.2,.8,.2,1) forwards}
+h1 .l:nth-child(2) span{animation-delay:.12s} h1 .l:nth-child(3) span{animation-delay:.24s}
+h1 em{font-style:italic;color:var(--acc)}
+@keyframes up{to{transform:none}}
+.hero-b{display:grid;grid-template-columns:1.2fr 1fr auto;gap:40px;align-items:end;margin-top:54px;padding-top:26px;border-top:1px solid var(--ink)}
+.hero-b p{max-width:460px;font-size:19px;line-height:1.5}
+.hero-b .who b{display:block;font-weight:600;font-size:19px}
+.hero-b .who span{color:var(--mut)}
+.fade{opacity:0;animation:fade 1s .7s forwards}
+@keyframes fade{to{opacity:1}}
+
+.btn{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--ink);border-radius:999px;padding:16px 26px;font-weight:500;font-size:16px;position:relative;overflow:hidden;transition:color .4s;white-space:nowrap;will-change:transform}
+.btn:before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .45s cubic-bezier(.7,0,.2,1);border-radius:inherit}
+.btn:hover{color:var(--paper)} .btn:hover:before{transform:none}
+.btn>*{position:relative}
+.btn svg{width:16px;height:16px;transition:transform .35s;flex:none}
+.btn:hover svg{transform:translate(3px,-3px)}
+.btn.fill{background:var(--ink);color:var(--paper)}
+.btn.fill:before{background:var(--acc)}
+
+.mq{border-block:1px solid var(--ink);overflow:hidden;padding:18px 0}
+.mq div{display:flex;gap:56px;width:max-content;animation:mq 36s linear infinite;font-size:clamp(26px,4vw,48px);white-space:nowrap}
+.mq span{display:inline-flex;align-items:center;gap:56px}
+.mq span:after{content:"✳";font-size:.6em;color:var(--acc)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:130px 0}
+.sh{display:grid;grid-template-columns:200px 1fr;gap:40px;margin-bottom:70px;align-items:start}
+.sh .mono{color:var(--mut);padding-top:14px}
+h2{font-size:clamp(40px,6.4vw,92px);line-height:.98;letter-spacing:-.03em}
+h2 em{font-style:italic}
+
+.proj{display:grid;grid-template-columns:200px 1fr 1fr;gap:40px;padding:54px 0;border-top:1px solid var(--ink);align-items:start;position:relative}
+.proj:last-child{border-bottom:1px solid var(--ink)}
+.proj .n{color:var(--mut)}
+.proj h3{font-size:clamp(40px,5.4vw,76px);line-height:1;letter-spacing:-.03em;margin-bottom:14px;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.proj:hover h3{transform:translateX(14px)}
+.proj .t{color:var(--acc);margin-bottom:22px;display:block}
+.proj p{max-width:460px;margin-bottom:22px}
+.proj ul{list-style:none}
+.proj li{padding:11px 0;border-top:1px solid var(--line);display:flex;gap:14px;font-size:16px}
+.proj li:before{content:"→";color:var(--acc)}
+.viz{background:var(--ink);color:var(--paper);border-radius:22px;aspect-ratio:5/4;position:relative;overflow:hidden;padding:26px}
+.viz .cap{position:absolute;left:26px;bottom:22px;color:#a9a59c}
+.viz svg{position:absolute;inset:0;width:100%;height:100%}
+.route{fill:none;stroke:#f3efe7;stroke-width:1.6;stroke-dasharray:6 8;opacity:.55}
+.trk{fill:var(--acc)}
+.stop{fill:var(--ink);stroke:#f3efe7;stroke-width:1.6}
+.ping{fill:none;stroke:var(--acc);stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:ping 2.4s ease-out infinite}
+@keyframes ping{from{transform:scale(.4);opacity:1}to{transform:scale(2.6);opacity:0}}
+.sc{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:min(80%,330px);background:var(--paper);color:var(--ink);border-radius:16px;padding:18px;box-shadow:0 30px 60px -20px #000}
+.sc .q{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-size:14px;margin-bottom:14px}
+.sc .q i{width:13px;height:13px;border:2px solid var(--mut);border-radius:50%;position:relative;flex:none}
+.sc .q i:after{content:"";position:absolute;right:-5px;bottom:-4px;width:6px;height:2px;background:var(--mut);transform:rotate(45deg)}
+.sc b{font-weight:600;font-size:16px;display:block}
+.sc small{color:var(--mut);font-size:13px}
+.sc .row{display:flex;gap:8px;margin-top:14px}
+.sc .pill{flex:1;text-align:center;border-radius:999px;padding:9px 6px;font-size:13px;font-weight:500;border:1px solid var(--line)}
+.sc .site{position:relative;overflow:hidden;border-color:transparent;color:#fff;animation:site 6s infinite}
+@keyframes site{0%,38%{background:#a83232}46%,100%{background:#2e9b5c}}
+.sc .site span{display:block;animation:lab 6s infinite}
+.sc .site span+span{position:absolute;inset:0;display:grid;place-items:center;animation:lab2 6s infinite}
+@keyframes lab{0%,38%{opacity:1}46%,100%{opacity:0}}
+@keyframes lab2{0%,38%{opacity:0}46%,100%{opacity:1}}
+
+.dark{background:var(--ink);color:var(--paper)}
+.dark .mono{color:#8f8b83}
+.pr{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:44px 0;border-top:1px solid #33322e}
+.pr:last-child{border-bottom:1px solid #33322e}
+.pr p{font-size:clamp(28px,4.2vw,58px);line-height:1.06;letter-spacing:-.02em;max-width:900px}
+.pr p em{font-style:italic;color:var(--acc)}
+
+.ab{display:grid;grid-template-columns:200px 1.3fr 1fr;gap:40px}
+.ab .big{font-size:clamp(26px,3vw,40px);line-height:1.18;letter-spacing:-.015em}
+.ab dl{border-top:1px solid var(--ink)}
+.ab dl div{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line)}
+.ab dt{color:var(--mut)} .ab dd{text-align:right;font-weight:500}
+
+.ct{padding:150px 0 40px;position:relative;overflow:hidden}
+.ct h2{font-size:clamp(64px,15vw,240px);line-height:.86}
+.ct h2 em{color:var(--acc)}
+.ct .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:54px}
+.ct .btn{border-color:var(--paper)} .ct .btn:before{background:var(--paper)} .ct .btn:hover{color:var(--ink)}
+.ct .btn.fill{background:var(--paper);color:var(--ink)} .ct .btn.fill:before{background:var(--acc)} .ct .btn.fill:hover{color:var(--paper)}
+.ft{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:120px;padding-top:22px;border-top:1px solid #33322e;color:#8f8b83}
+.ft a:hover{color:var(--paper)}
+
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
-@media (max-width:720px){.grid{grid-template-columns:1fr}.hero{padding:40px 0 56px}nav{display:none}section{padding:52px 0}}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:900px){
+  .hd nav{display:none}
+  .hero-b{grid-template-columns:1fr;gap:26px}
+  .sh,.pr{grid-template-columns:1fr;gap:14px}
+  .sh{margin-bottom:44px}
+  .proj{grid-template-columns:1fr;gap:26px;padding:40px 0}
+  .ab{grid-template-columns:1fr;gap:30px}
+  section{padding:84px 0}
+  .ct{padding:96px 0 34px} .ft{margin-top:70px}
+  .wrap{width:calc(100% - 40px)}
+  .btn{padding:15px 22px;max-width:100%}
+  .ct .btn span{overflow:hidden;text-overflow:ellipsis}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  h1 .l span{transform:none}.fade,.rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <a class="logo" href="#top">MUHAMMAD ABDULLA <span>ALMINDHRY</span></a>
-    <nav><a href="#work">What I build</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-  </header>
-</div>
+<div id="bar"></div>
+<div id="cur"></div>
+
+<header>
+  <div class="wrap hd mono">
+    <a href="#top">Muhammad Abdulla Almindhry</a>
+    <nav><a href="#work">Work</a><a href="#principles">Principles</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
 
 <main id="top">
   <div class="wrap hero">
-    <span class="k rv">Founder · Engineer · Builder</span>
-    <h1 class="rv">Muhammad Abdulla Almindhry builds software that <em>businesses run on</em>.</h1>
-    <p class="lead rv">I am the founder of <b>CargoOS</b>, fleet and trip management for road-freight operators, and <b>AlmindhryBuilds</b>, websites that make sure a customer who searches on Google reaches the business.</p>
-    <div class="facts rv"><span>Founder</span><span>Mechatronics engineering student</span><span>Swahili and English</span><span>Solo builder</span></div>
-    <div class="rv" style="margin-top:26px;position:relative"><a class="btn" style="background:#25d366;color:#04210f;border-color:#25d366" href="https://wa.me/255757138883" target="_blank" rel="noopener">Message me on WhatsApp</a></div>
+    <div class="status mono fade"><span class="dot"></span>Open to new projects</div>
+    <h1 class="serif" aria-label="I build software businesses run on.">
+      <span class="l"><span>I build software</span></span>
+      <span class="l"><span>businesses</span></span>
+      <span class="l"><span><em>run on.</em></span></span>
+    </h1>
+    <div class="hero-b fade">
+      <div class="who"><b>Muhammad Abdulla Almindhry</b><span>Founder of CargoOS and AlmindhryBuilds</span></div>
+      <p>Two products with one aim: when a customer goes looking for a business, they reach it, and the owner sees every number that matters.</p>
+      <a class="btn fill mag" href="https://wa.me/255757138883" target="_blank" rel="noopener"><span>Start a conversation</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    </div>
   </div>
+
+  <div class="mq serif" aria-hidden="true"><div>
+    <span>CargoOS</span><span><i>Fleet and trip management</i></span><span>AlmindhryBuilds</span><span><i>Websites that bring customers</i></span><span>Design, build, ship</span>
+    <span>CargoOS</span><span><i>Fleet and trip management</i></span><span>AlmindhryBuilds</span><span><i>Websites that bring customers</i></span><span>Design, build, ship</span>
+  </div></div>
 
   <section id="work">
     <div class="wrap">
-      <span class="k rv">What I build</span>
-      <h2 class="rv">Two products</h2>
-      <div class="grid">
-        <article class="card rv">
-          <h3>CargoOS</h3>
-          <span class="t">Fleet and trip management for road freight</span>
-          <p>CargoOS is built so a fleet owner knows where every truck is, where every shilling goes, and the profit on every trip.</p>
+      <div class="sh"><span class="mono rv">(01) Work</span><h2 class="serif rv">Two products, built and shipped <em>by one person.</em></h2></div>
+
+      <article class="proj rv">
+        <span class="mono n">01 / Product</span>
+        <div>
+          <h3 class="serif">CargoOS</h3>
+          <span class="mono t">Fleet and trip management for road freight</span>
+          <p>Built so a fleet owner knows where every truck is, where every shilling goes, and the profit on every trip.</p>
           <ul>
             <li>Owner dashboard on the web</li>
             <li>Driver app for Android</li>
             <li>Trips, expenses and profit per trip in one place</li>
-            <li>Built and in production, now in its pilot stage with the first operators</li>
+            <li>In production, in its pilot stage with the first operators</li>
           </ul>
-        </article>
-        <article class="card rv">
-          <h3>AlmindhryBuilds</h3>
-          <span class="t">Websites that bring businesses customers</span>
+        </div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+            <path id="rt" class="route" d="M40 320 C120 300 110 210 190 200 S300 250 330 170 S400 80 462 70"/>
+            <circle class="stop" cx="40" cy="320" r="7"/><circle class="stop" cx="190" cy="200" r="7"/><circle class="stop" cx="330" cy="170" r="7"/><circle class="stop" cx="462" cy="70" r="7"/>
+            <circle class="ping" cx="462" cy="70" r="10"/>
+            <circle class="trk" r="9"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#rt"/></animateMotion></circle>
+          </svg>
+          <span class="mono cap">Every truck, every trip</span>
+        </div>
+      </article>
+
+      <article class="proj rv">
+        <span class="mono n">02 / Studio</span>
+        <div>
+          <h3 class="serif">AlmindhryBuilds</h3>
+          <span class="mono t">Websites that bring businesses customers</span>
           <p>Many businesses have a "Website" button on their Google listing that opens an error page, or no website at all. I find those and fix them.</p>
           <ul>
             <li>A site that shows the service, the prices and how to book</li>
@@ -146,43 +269,90 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
             <li>The domain registered in the client's own name</li>
             <li>The Google listing linked to the working site</li>
           </ul>
-        </article>
+        </div>
+        <div class="viz" aria-hidden="true">
+          <div class="sc">
+            <div class="q"><i></i>your business name</div>
+            <b>Your business</b><small>Open now · on Google</small>
+            <div class="row"><span class="pill">Call</span><span class="pill">Directions</span><span class="pill site"><span>Error</span><span>Website</span></span></div>
+          </div>
+          <span class="mono cap">From a dead link to a working one</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="principles" class="dark">
+    <div class="wrap">
+      <div class="sh"><span class="mono rv">(02) Principles</span><h2 class="serif rv">How I <em>work.</em></h2></div>
+      <div class="pr rv"><span class="mono">01</span><p class="serif">I check before I speak. Every problem I point out is one I have <em>opened and tested</em> myself.</p></div>
+      <div class="pr rv"><span class="mono">02</span><p class="serif">The client owns everything: the domain, the site, <em>the name.</em></p></div>
+      <div class="pr rv"><span class="mono">03</span><p class="serif">A site is finished when the phone rings, <em>not when it looks good.</em></p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap ab">
+      <span class="mono rv" style="color:var(--mut)">(03) About</span>
+      <div class="rv">
+        <p class="serif big">I am Muhammad Abdulla Almindhry, a founder from Tanzania and a mechatronics engineering student. I design, build and ship my products myself.</p>
+        <p style="margin-top:22px;color:var(--mut);max-width:520px">My work starts from one question: when a customer goes looking for a business, do they reach it? For a transport company that means knowing its trucks and its costs. For a car rental, a clinic or a school it means a link that opens and a phone that rings.</p>
       </div>
+      <dl class="rv" style="--d:.1s">
+        <div><dt>Role</dt><dd>Founder, solo builder</dd></div>
+        <div><dt>Products</dt><dd>CargoOS, AlmindhryBuilds</dd></div>
+        <div><dt>Training</dt><dd>Mechatronics engineering</dd></div>
+        <div><dt>Languages</dt><dd>Swahili, English</dd></div>
+        <div><dt>Works with</dt><dd>Clients in any country</dd></div>
+      </dl>
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section id="contact" class="dark ct">
     <div class="wrap">
-      <span class="k rv">About</span>
-      <h2 class="rv">Who I am</h2>
-      <p class="rv">I am <b>Muhammad Abdulla Almindhry</b>, a founder from Tanzania and a mechatronics engineering student. I design, build and ship my products myself.</p>
-      <p class="rv">My work starts from one question: <b>when a customer goes looking for a business, do they reach it?</b> For a transport company that means knowing its trucks and its costs. For a car rental, a clinic or a school it means a link that opens and a phone that rings.</p>
-      <p class="rv">I work in <b>Swahili and English</b> with clients in any country, and I build for the way customers really reach a business: on the phone and on WhatsApp.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <span class="k rv">Contact</span>
-      <h2 class="rv">Find me</h2>
-      <p class="rv" style="color:var(--mut);max-width:640px">For CargoOS pilots or a website for your business, reach me through the links below.</p>
-      <div class="rv" style="margin-top:14px">
-        <a class="btn" style="background:#25d366;color:#04210f;border-color:#25d366" href="https://wa.me/255757138883" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn" href="mailto:muhammdabdulla251@gmail.com">muhammdabdulla251@gmail.com</a>
-        <a class="btn" href="https://github.com/muhammdabdulla251-lab" rel="me noopener" target="_blank">GitHub</a>
+      <span class="mono rv">(04) Contact</span>
+      <h2 class="serif rv" style="margin-top:26px">Let's <em>talk.</em></h2>
+      <div class="cta rv">
+        <a class="btn fill mag" href="https://wa.me/255757138883" target="_blank" rel="noopener"><span>WhatsApp</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a class="btn mag" href="mailto:muhammdabdulla251@gmail.com"><span>muhammdabdulla251@gmail.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </div>
+      <div class="ft mono">
+        <span>© <span id="y"></span> Muhammad Abdulla Almindhry</span>
+        <span>CargoOS · AlmindhryBuilds</span>
+        <a href="https://github.com/muhammdabdulla251-lab" rel="me noopener" target="_blank">GitHub ↗</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer><div class="wrap">© <span id="y"></span> Muhammad Abdulla Almindhry · CargoOS · AlmindhryBuilds</div></footer>
 <script>
 document.getElementById("y").textContent = new Date().getFullYear();
 var els = [].slice.call(document.querySelectorAll(".rv"));
 if ("IntersectionObserver" in window) {
-  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold: 0.1});
-  els.forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 0.06 + "s"; io.observe(el); });
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold: 0.12});
+  els.forEach(function (el) { io.observe(el); });
 } else { els.forEach(function (el) { el.classList.add("in"); }); }
+
+window.addEventListener("scroll", function () {
+  var h = document.documentElement;
+  document.getElementById("bar").style.width = (h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight) * 100) + "%";
+}, {passive: true});
+
+if (window.matchMedia("(hover:hover)").matches) {
+  var cur = document.getElementById("cur");
+  window.addEventListener("mousemove", function (e) { cur.style.opacity = 1; cur.style.left = e.clientX + "px"; cur.style.top = e.clientY + "px"; });
+  [].forEach.call(document.querySelectorAll("a,.proj"), function (a) {
+    a.addEventListener("mouseenter", function () { cur.classList.add("big"); });
+    a.addEventListener("mouseleave", function () { cur.classList.remove("big"); });
+  });
+  [].forEach.call(document.querySelectorAll(".mag"), function (b) {
+    b.addEventListener("mousemove", function (e) {
+      var r = b.getBoundingClientRect();
+      b.style.transform = "translate(" + ((e.clientX - r.left - r.width / 2) * 0.25) + "px," + ((e.clientY - r.top - r.height / 2) * 0.35) + "px)";
+    });
+    b.addEventListener("mouseleave", function () { b.style.transform = ""; });
+  });
+}
 </script>
 </body>
 </html>
